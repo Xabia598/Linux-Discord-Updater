@@ -16,4 +16,8 @@ wait;
 
 gdebi DS_UPD -n
 
+wait; 
+
+rm DS_UPD
+
 echo "Done, enjoy! :D"
