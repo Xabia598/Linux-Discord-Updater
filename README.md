@@ -26,6 +26,17 @@ It makes a petition to the official Discord .deb file and downloads the latest v
 
 Take care that, if you have Discord running at the moment, it will close and you will have to open it again after updating it.
 
+# How do I make it a terminal command
+
+It's easy, you just need to create a folder with whatever name and enter (as root) on the terminal this little command:
+
+```sh
+alias COMMAND_NAME=/path/to/discord/updater/discord-upd.sh
+```
+
+It's important that you change "COMMAND_NAME" to a non-taken command name, like "dsupd" or "updds".
+Also take note that you cannot move the file to another folder, if you want to change it position you will have to repeat the mentioned command after you move it and indicate it's exact path to the file.
+
 # Possible updates
 
 I will *maybe* update this repository and make the script run every time you boot your linux system, but, the future is incertain. Have a nice one and enjoy!
