@@ -37,6 +37,28 @@ alias COMMAND_NAME=/path/to/discord/updater/discord-upd.sh
 It's important that you change "COMMAND_NAME" to a non-taken command name, like "dsupd" or "updds".
 Also take note that you cannot move the file to another folder, if you want to change it position you will have to repeat the mentioned command after you move it and indicate it's exact path to the file.
 
+# Possible errors with gdebi
+
+If you dont have gdebi updated, it can give you this error:
+
+```
+...
+This package is uninstallable
+Failed to satisfy all dependencies (broken cache)
+```
+
+## How do you fix it?
+
+Using the following terminal commands:
+
+```sh
+apt update
+apt-get --purge remove gdebi
+apt-get install gdebi
+```
+
+Now try running again the script, it should work!
+
 # Possible updates
 
 I will *maybe* update this repository and make the script run every time you boot your linux system, but, the future is incertain. Have a nice one and enjoy!
