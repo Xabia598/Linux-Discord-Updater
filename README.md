@@ -28,14 +28,34 @@ Take care that, if you have Discord running at the moment, it will close and you
 
 # How do I make it a terminal command
 
+## Via alias
 It's easy, you just need to create a folder with whatever name and enter (as root) on the terminal this little command:
 
 ```sh
-alias COMMAND_NAME=/path/to/discord/updater/discord-upd.sh
+alias COMMAND_NAME=$PWD/discord-upd.sh
 ```
 
-It's important that you change "COMMAND_NAME" to a non-taken command name, like "dsupd" or "updds".
-Also take note that you cannot move the file to another folder, if you want to change it position you will have to repeat the mentioned command after you move it and indicate it's exact path to the file.
+(You have to be in the folder you've made at the moment of executing the previous command)
+
+It's important that you change "COMMAND_NAME" to a non-taken command name, like "dsupd" or "updds". (You can check it using ```alias -p```)
+
+## Via cmd-maker
+
+This method is better than alias, as you don't have to worry about the file location.
+
+You just have to execute cmd-maker.sh and specify the name you want for the command.
+
+For example:
+
+```sh
+./cmd-maker.sh dupd
+
+./cmd-maker.sh dspd
+```
+
+It makes a copy of discord-updater.sh and moves it into /bin directory. 
+
+After executing the script, you can try to enter the command you just made to test if it worked like it should!
 
 # Possible errors with gdebi
 
@@ -47,7 +67,7 @@ This package is uninstallable
 Failed to satisfy all dependencies (broken cache)
 ```
 
-## How do you fix it?
+## How do I fix it?
 
 Using the following terminal commands:
 

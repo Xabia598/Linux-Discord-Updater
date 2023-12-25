@@ -5,19 +5,20 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-echo "UPDATING DISCORD..."
-echo "-- Made by Xabia598 with <3 --"
+echo "Updating Discord, this could take a while..."
+printf "-- Made with <3 by Xabia598--"
 
-rm DS_UPD
+rm DS_UPD 2> /dev/null
 
+echo \n
 curl -L --output DS_UPD https://discord.com/api/download/stable?platform=linux&format=deb
 
 wait;
 
 gdebi DS_UPD -n
 
-wait; 
+wait;
 
-rm DS_UPD
+rm DS_UPD 2> /dev/null
 
 echo "Done, enjoy! :D"
