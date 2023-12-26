@@ -6,16 +6,20 @@
 
 # How to use it
 
-You simply need to be root and have the packet "gdebi" installed.
+You simply need to be root and have the packet "gdebi", "notify-send" and "cron" installed.
 
 ```sh
-apt install gdebi
+apt-get install gdebi
+
+apt-get install notify-osd (UBUNTU)
+
+apt-get install libnotify-bin (DEBIAN)
 ```
 
-If you already meet those requirements, you only need to execute the bash script and it automatically will update your Discord.
+If you already meet those requirements, you only need to execute cmd-maker.sh bash script to make your custom command and, in addition, run it automatically once a day with cron:
 
 ```sh
-./discord-upd.sh
+./cmd-maker.sh YOUR_COMMAND_NAME
 ```
 
 ---
@@ -50,12 +54,20 @@ For example:
 ```sh
 ./cmd-maker.sh dupd
 
+or
+
 ./cmd-maker.sh dspd
 ```
 
 It makes a copy of discord-updater.sh and moves it into /bin directory. 
 
 After executing the script, you can try to enter the command you just made to test if it worked like it should!
+
+# Update Discord on-boot
+
+## Via cmd-maker
+
+You just have to run cmd-maker.sh and it will copy it to /etc/cron.daily
 
 # Possible errors with gdebi
 
@@ -78,7 +90,3 @@ apt-get install gdebi
 ```
 
 Now try running again the script, it should work!
-
-# Possible updates
-
-I will *maybe* update this repository and make the script run every time you boot your linux system, but, the future is incertain. Have a nice one and enjoy!
