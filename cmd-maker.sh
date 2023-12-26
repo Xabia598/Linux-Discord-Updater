@@ -1,10 +1,11 @@
 #!/bin/bash
-echo "-- Made with <3 by Xabia598--"
 
 if [ "$EUID" -ne 0 ]
   then echo "Root permission needed, please turn to root/sudo user."
   exit
 fi
+
+echo "-- Made with <3 by Pando --"
 
 echo "Establishing command..."
 
@@ -14,7 +15,7 @@ cp $1 /bin
 cp $1 /etc/cron.daily
 rm $1
 
-echo "Done"
+echo "Done!"
 
 echo "Establishing notify-send icon..."
 

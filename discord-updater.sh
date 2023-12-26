@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 echo "Updating Discord, this could take a while..."
-echo "-- Made with <3 by Xabia598--"
+echo "-- Made with <3 by Pando --"
 
 rm DS_UPD 2> /dev/null
 

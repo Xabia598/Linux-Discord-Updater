@@ -30,9 +30,10 @@ It makes a petition to the official Discord .deb file and downloads the latest v
 
 Take care that, if you have Discord running at the moment, it will close and you will have to open it again after updating it.
 
-# How do I make it a terminal command
+# How do I make it a shell command
 
 ## Via alias
+
 It's easy, you just need to create a folder with whatever name and enter (as root) on the terminal this little command:
 
 ```sh
@@ -63,11 +64,13 @@ It makes a copy of discord-updater.sh and moves it into /bin directory.
 
 After executing the script, you can try to enter the command you just made to test if it worked like it should!
 
+(You can also try ```ls /bin | grep COMMAND_NAME```)
+
 # Update Discord on-boot
 
 ## Via cmd-maker
 
-You just have to run cmd-maker.sh and it will copy it to /etc/cron.daily
+You just have to run cmd-maker.sh and it will copy it to /etc/cron.daily (It's possible I'll make it more customizable on this term)
 
 # Possible errors with gdebi
 
@@ -90,3 +93,29 @@ apt-get install gdebi
 ```
 
 Now try running again the script, it should work!
+
+# UNINSTALLING
+
+This part is very important as you don't want to remove shells or directories you don't want to remove.
+
+## How to remove Discord Updater 
+
+1. Execute (with root):
+
+```
+uninstall.sh YOUR_COMMAND_NAME
+```
+
+For example:
+
+```sh
+./uninstall dsupd
+
+or
+
+./uninstall dupd
+```
+
+This will remove the icons, crons and etc... You can still re-install it. :D
+
+*Made by Pando with lots of <3*
